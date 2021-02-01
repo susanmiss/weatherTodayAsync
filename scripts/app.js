@@ -7,11 +7,6 @@ const icon = document.querySelector('.icon img');
 
 const updateUI = (data) => {
 
-    // console.log(data);
-    // const cityDetails = data.cityDetails;
-    // const weather = data.weather;
-
-    //destructure properties, same as above:
     const { cityDetails, weather } = data;
 
     //update details template
@@ -39,7 +34,6 @@ const updateUI = (data) => {
 }
 
 const updateCity = async (citySearch) => {
-    //console.log(citySearch);
     const cityDetails = await getCity(citySearch);
     const weather = await getWeather(cityDetails.Key);
 
